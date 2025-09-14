@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "build/TrafficLight.ino.hex"
+elf = "build/TrafficLight.ino.elf"

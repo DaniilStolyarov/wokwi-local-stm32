@@ -1,0 +1,6 @@
+#line 1 "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight\\.vscode\\arduino.json"
+{
+    "sketch": "TrafficLight.ino",
+    "configuration": "pnum=NUCLEO_C031C6,upload_method=MassStorage,xserial=generic,usb=none,xusb=FS,opt=osstd,dbg=none,rtlib=nano",
+    "board": "STMicroelectronics:stm32:Nucleo_64"
+}

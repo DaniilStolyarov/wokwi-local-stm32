@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "..\\..\\..,..\\..\\..,..\\..\\..",
+  "compiler.optimization_flags": "{build.flags.optimize} {build.flags.debug}",
+  "customBuildProperties": "",
+  "fqbn": "STMicroelectronics:stm32:Nucleo_64",
+  "hardwareFolders": "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages",
+  "otherLibrariesFolders": "C:\\Users\\danst\\Documents\\Arduino\\libraries",
+  "sketchLocation": "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight"
+}

@@ -1,0 +1,13 @@
+# init
+
+vscode + arduino + stm32
+arduino-cli config init
+arduino-cli config set network.connection_timeout 180s
+arduino-cli config add board_manager.additional_urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
+arduino-cli core update-index
+arduino-cli core install STMicroelectronics:stm32
+
+
+# compile / build
+
+arduino-cli compile --fqbn STMicroelectronics:stm32:Nucleo_64 --build-path .\build .
