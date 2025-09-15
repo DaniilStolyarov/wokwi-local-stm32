@@ -11,3 +11,9 @@ arduino-cli core install STMicroelectronics:stm32
 # compile / build
 
 arduino-cli compile --fqbn STMicroelectronics:stm32:Nucleo_64 --build-path .\build .
+
+# see also
+https://github.com/microsoft/vscode-arduino/issues/1556
+
+ "intelliSenseMode": "gcc-x64",
+  "intelliSenseMode": "gcc-arm",

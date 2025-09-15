@@ -4,21 +4,20 @@
     "configurations": [
         {
             "name": "Arduino",
-            "compilerPath": "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\xpack-arm-none-eabi-gcc\\14.2.1-1.1\\bin\\arm-none-eabi-g++",
+            "compilerPath": "arm-none-eabi-g++.exe",
             "compilerArgs": [
                 "-mcpu=cortex-m0plus",
                 "-mthumb",
+                "-flto",
                 "-w",
                 "-std=gnu++17",
                 "-ffunction-sections",
                 "-fdata-sections",
                 "-fno-threadsafe-statics",
-                "--param",
                 "-fno-rtti",
                 "-fno-exceptions",
                 "-fno-use-cxa-atexit"
             ],
-            "intelliSenseMode": "gcc-x64",
             "includePath": [
                 "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight",
                 "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.11.0\\cores\\arduino\\avr",
@@ -43,6 +42,11 @@
                 "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\CMSIS\\5.9.0\\CMSIS\\DSP\\PrivateInclude",
                 "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.11.0\\cores\\arduino",
                 "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.11.0\\variants\\STM32C0xx\\C031C(4-6)(T-U)",
+                "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.11.0\\libraries\\SPI\\src",
+                "C:\\Users\\danst\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library",
+                "C:\\Users\\danst\\Documents\\Arduino\\libraries\\Adafruit_BusIO",
+                "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.11.0\\libraries\\Wire\\src",
+                "C:\\Users\\danst\\Documents\\Arduino\\libraries\\Adafruit_ILI9341",
                 "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\hardware\\stm32\\2.11.0\\libraries\\SrcWrapper\\src",
                 "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\xpack-arm-none-eabi-gcc\\14.2.1-1.1\\arm-none-eabi\\include\\c++\\14.2.1",
                 "C:\\Users\\danst\\AppData\\Local\\Arduino15\\packages\\STMicroelectronics\\tools\\xpack-arm-none-eabi-gcc\\14.2.1-1.1\\arm-none-eabi\\include\\c++\\14.2.1\\arm-none-eabi",

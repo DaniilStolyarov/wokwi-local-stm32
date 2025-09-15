@@ -102,4 +102,23 @@ D:\4_kurs_sem1\CyberPhysics\practices\1\TrafficLight\build\sketch\TrafficLight.i
  C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\cores\arduino/pins_arduino.h \
  C:/Users/danst/AppData/Local/Arduino15/packages/STMicroelectronics/hardware/stm32/2.11.0/libraries/SrcWrapper/inc/PinNames.h \
  C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\cores\arduino/pins_arduino_analog.h \
- C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\cores\arduino/pins_arduino_digital.h
+ C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\cores\arduino/pins_arduino_digital.h \
+ D:\4_kurs_sem1\CyberPhysics\practices\1\TrafficLight/Include/CarsController.h \
+ D:\4_kurs_sem1\CyberPhysics\practices\1\TrafficLight/Include/LED.h \
+ D:\4_kurs_sem1\CyberPhysics\practices\1\TrafficLight/Include/ZebraController.h \
+ C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\libraries\SPI\src/SPI.h \
+ C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\libraries\SPI\src/utility/spi_com.h \
+ C:/Users/danst/AppData/Local/Arduino15/packages/STMicroelectronics/hardware/stm32/2.11.0/libraries/SrcWrapper/inc/stm32_def.h \
+ C:/Users/danst/AppData/Local/Arduino15/packages/STMicroelectronics/hardware/stm32/2.11.0/libraries/SrcWrapper/inc/PeripheralPins.h \
+ C:\Users\danst\Documents\Arduino\libraries\Adafruit_GFX_Library/Adafruit_GFX.h \
+ C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\cores\arduino/Print.h \
+ C:\Users\danst\Documents\Arduino\libraries\Adafruit_GFX_Library/gfxfont.h \
+ C:\Users\danst\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_I2CDevice.h \
+ C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\libraries\Wire\src/Wire.h \
+ C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\cores\arduino/Stream.h \
+ C:\Users\danst\AppData\Local\Arduino15\packages\STMicroelectronics\hardware\stm32\2.11.0\libraries\Wire\src/utility/twi.h \
+ C:\Users\danst\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_SPIDevice.h \
+ C:\Users\danst\Documents\Arduino\libraries\Adafruit_ILI9341/Adafruit_ILI9341.h \
+ C:\Users\danst\Documents\Arduino\libraries\Adafruit_GFX_Library/Adafruit_SPITFT.h \
+ C:\Users\danst\Documents\Arduino\libraries\Adafruit_GFX_Library/Adafruit_GFX.h \
+ D:\4_kurs_sem1\CyberPhysics\practices\1\TrafficLight\build\sketch\Include/Dispatcher.h

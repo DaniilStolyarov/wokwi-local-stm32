@@ -1,30 +1,42 @@
 #line 1 "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight\\TrafficLight.ino"
 #include <Arduino.h>
-int CurrentLedState = 1;
-#line 3 "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight\\TrafficLight.ino"
-void setup();
+#include <Include/CarsController.h>
+#include <Include/ZebraController.h>
+#include "Include/Dispatcher.h"
+
+const uint32_t TACT = 500000;
+uint32_t debug_delay;
+uint32_t micros_buffer;
+Dispatcher* dispatcher;
+
 #line 11 "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight\\TrafficLight.ino"
+void setup();
+#line 27 "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight\\TrafficLight.ino"
 void loop();
-#line 3 "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight\\TrafficLight.ino"
+#line 11 "D:\\4_kurs_sem1\\CyberPhysics\\practices\\1\\TrafficLight\\TrafficLight.ino"
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(115200);
-  Serial.println("Hello, STM32!");
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, CurrentLedState);
+    Serial.begin(115200);
+
+    CarsController carsController = CarsController();
+    ZebraController zebraController = ZebraController();
+    size_t instructionCount = 4;
+    RoadState* roadProgram = new RoadState[instructionCount]{
+        {ZebraControllerState::RED, CarsControllerState::YELLOW, 1000},
+        {ZebraControllerState::RED, CarsControllerState::GREEN, 10000},
+        {ZebraControllerState::RED, CarsControllerState::YELLOW, 1000},
+        {ZebraControllerState::GREEN, CarsControllerState::RED, 15000},
+    };
+    dispatcher = new Dispatcher(roadProgram, instructionCount, &carsController, &zebraController, TACT / 1000);
+    dispatcher->initialize();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  delay(1000); // this speeds up the simulation
-  digitalWrite(LED_BUILTIN, CurrentLedState);
-  if (CurrentLedState == HIGH)
-  {
-    CurrentLedState = LOW;
-  }
-  else 
-  {
-    CurrentLedState = HIGH;
-  }
+    micros_buffer = micros();
+    dispatcher->call();
+    debug_delay = (TACT + micros_buffer - micros()) / 1000;
+    delay(debug_delay);
+
+    Serial.print(" debug_delay_ms: ");
+    Serial.println(debug_delay);
 }
 
