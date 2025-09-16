@@ -2,6 +2,7 @@
 #include <Include/CarsController.h>
 #include <Include/ZebraController.h>
 #include "Include/Dispatcher.h"
+#include "Include/FlagButton.h"
 
 const uint32_t TACT = 500000;
 uint32_t debug_delay;
@@ -13,19 +14,21 @@ void setup() {
 
     CarsController carsController = CarsController();
     ZebraController zebraController = ZebraController();
+    FlagButton flagButton = FlagButton();
     size_t instructionCount = 4;
     RoadState* roadProgram = new RoadState[instructionCount]{
-        {ZebraControllerState::RED, CarsControllerState::YELLOW, 1000},
-        {ZebraControllerState::RED, CarsControllerState::GREEN, 10000},
-        {ZebraControllerState::RED, CarsControllerState::YELLOW, 1000},
-        {ZebraControllerState::GREEN, CarsControllerState::RED, 15000},
+        {ZebraControllerState::RED, CarsControllerState::YELLOW, 5000},
+        {ZebraControllerState::RED, CarsControllerState::GREEN, 30000, .flagButtonDependency=false},
+        {ZebraControllerState::RED, CarsControllerState::YELLOW, 5000},
+        {ZebraControllerState::GREEN, CarsControllerState::RED, 30000},
     };
-    dispatcher = new Dispatcher(roadProgram, instructionCount, &carsController, &zebraController, TACT / 1000);
+    dispatcher = new Dispatcher(roadProgram, instructionCount, &carsController, &zebraController, &flagButton, TACT / 1000);
     dispatcher->initialize();
 }
 
 void loop() {
     micros_buffer = micros();
+    
     dispatcher->call();
     debug_delay = (TACT + micros_buffer - micros()) / 1000;
     delay(debug_delay);

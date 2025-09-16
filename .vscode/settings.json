@@ -5,7 +5,10 @@
     "arduino.useArduinoCli": true,
     "files.associations": {
         "*.ino": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "memory": "cpp",
+        "format": "cpp",
+        "functional": "cpp"
     },
     "arduino.disableIntelliSenseAutoGen": true,
     "arduino.clearOutputOnBuild": true,

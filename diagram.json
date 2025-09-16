@@ -29,7 +29,14 @@
       "attrs": { "color": "limegreen" }
     },
     { "type": "wokwi-potentiometer", "id": "pot1", "top": 238.7, "left": -125, "attrs": {} },
-    { "type": "wokwi-ili9341", "id": "lcd1", "top": 10.4, "left": 422.1, "attrs": {} }
+    { "type": "wokwi-ili9341", "id": "lcd1", "top": 10.4, "left": 422.1, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 150.2,
+      "left": -124.8,
+      "attrs": { "color": "green", "xray": "1" }
+    }
   ],
   "connections": [
     [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
@@ -48,7 +55,9 @@
     [ "lcd1:MOSI", "nucleo:D11", "green", [ "v38.4", "h-336.01", "v-144" ] ],
     [ "lcd1:D/C", "nucleo:D0", "magenta", [ "v28.8", "h-288" ] ],
     [ "lcd1:CS", "nucleo:D1", "green", [ "v0" ] ],
-    [ "lcd1:LED", "nucleo:D8", "green", [ "v96", "h-336.01", "v-172.8" ] ]
+    [ "lcd1:LED", "nucleo:D8", "green", [ "v96", "h-336.01", "v-172.8" ] ],
+    [ "btn1:2.r", "nucleo:GND.6", "green", [ "h48.2", "v48.2" ] ],
+    [ "btn1:1.r", "nucleo:A0", "green", [ "v0", "h38.6", "v105.6" ] ]
   ],
   "dependencies": {}
 }

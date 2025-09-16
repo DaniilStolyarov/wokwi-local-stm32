@@ -13,7 +13,7 @@
 
 #define IMAGE_WIDTH 12
 #define IMAGE_HEIGHT 16
-#define SCALE 5
+#define SCALE 7
 enum class ZebraControllerState {RED, GREEN};
 class ZebraController
 {
