@@ -4,7 +4,7 @@
 #include "Include/CarsController.h"
 #include "Include/ZebraController.h"
 #include "Include/FlagButton.h"
-struct RoadState
+struct Instruction
 {
     ZebraControllerState zebra;
     CarsControllerState cars;
@@ -23,12 +23,12 @@ private:
     void nextInstruction();
     
 public:
-    RoadState* roadProgram;
+    Instruction* roadProgram;
     CarsController* carsController;
     ZebraController* zebraController;
     FlagButton* flagButton;
     size_t instructionCount;
-    Dispatcher(RoadState* _roadProgram, size_t _instructionCount, CarsController* _carsController, ZebraController* _zebraController, FlagButton* _flagButton, uint32_t _millisPerTick);
+    Dispatcher(Instruction* _roadProgram, size_t _instructionCount, CarsController* _carsController, ZebraController* _zebraController, FlagButton* _flagButton, uint32_t _millisPerTick);
     
     void initialize();
     void call();

@@ -21,7 +21,7 @@ void setup() {
     FlagButton flagButton = FlagButton();
     
     size_t instructionCount = 4;
-    RoadState* roadProgram = new RoadState[instructionCount]{
+    Instruction* roadProgram = new Instruction[instructionCount]{
         {ZebraControllerState::RED, CarsControllerState::YELLOW, 5000},
         {ZebraControllerState::RED, CarsControllerState::GREEN, 30000, .flagButtonDependency=false},
         {ZebraControllerState::RED, CarsControllerState::YELLOW, 5000},

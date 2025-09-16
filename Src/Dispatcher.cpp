@@ -1,6 +1,6 @@
 #include "Include/Dispatcher.h"
 #include <Arduino.h>
-Dispatcher::Dispatcher(RoadState *_roadProgram, size_t _instructionCount, CarsController* _carsController, ZebraController* _zebraController, FlagButton* _flagButton, uint32_t _millisPerTick)
+Dispatcher::Dispatcher(Instruction *_roadProgram, size_t _instructionCount, CarsController* _carsController, ZebraController* _zebraController, FlagButton* _flagButton, uint32_t _millisPerTick)
 {
     carsController = _carsController;
     zebraController = _zebraController;

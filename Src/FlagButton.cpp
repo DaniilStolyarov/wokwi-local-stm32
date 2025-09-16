@@ -1,8 +1,9 @@
 #include "Include/FlagButton.h"
-
+#include <Arduino.h>
 void handleClickCallback()
 {
     FlagButton::contactCount += 1;
+    Serial.println("User requested GREEN!");
 }
 FlagButton::FlagButton()
 {

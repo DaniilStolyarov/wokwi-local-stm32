@@ -1,7 +1,6 @@
 #ifndef CARS_CONTROLLER_H
 #define CARS_CONTROLLER_H
 
-#include <Arduino.h>
 #include "Include/LED.h"
 
 #define RED_LED_PIN D7
@@ -24,6 +23,6 @@ public:
     CarsControllerState getState();
     
     void apply();
-};
+};  
 
 #endif // CARS_CONTROLLER_H
