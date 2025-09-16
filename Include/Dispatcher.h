@@ -21,6 +21,7 @@ private:
     void apply();
     void executeInstruction();
     void nextInstruction();
+    
 public:
     RoadState* roadProgram;
     CarsController* carsController;
@@ -31,6 +32,7 @@ public:
     
     void initialize();
     void call();
+    void setInstructionDelay(size_t instructionIndex, uint32_t delayMillis);
 };
 
 #endif // DISPATCHER_H

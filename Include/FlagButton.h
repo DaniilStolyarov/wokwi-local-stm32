@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-#define BUTTON_PIN A0
+#define BUTTON_PIN D9
 
 class FlagButton
 {

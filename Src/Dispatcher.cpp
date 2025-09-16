@@ -74,3 +74,8 @@ void Dispatcher::nextInstruction()
     ++instructionIndex %= instructionCount;
     stateTicks = 0;
 }
+
+void Dispatcher::setInstructionDelay(size_t instructionIndex, uint32_t delayMillis)
+{
+    roadProgram[instructionIndex].delayMillis = delayMillis;
+}

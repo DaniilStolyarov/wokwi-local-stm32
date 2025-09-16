@@ -43,7 +43,6 @@ void ZebraController::setState(ZebraControllerState _state)
 
 void ZebraController::apply()
 {
-    
     uint8_t bytesPerRow = (IMAGE_WIDTH + 7) / 8;
 
     // Вычисляем смещение для центрирования изображения
